@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Detection</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #444;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 15px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #45a049;
+            border-radius: 5px;
+        }
+
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Camera Feed Container */
+        .camera-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 90%;
+        }
+
+        .camera-container img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        /* Stop Button */
+        .stop-btn {
+            margin-top: 20px;
+        }
+
+        .stop-btn button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .stop-btn button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">Real-Time Detection</div>
+        <div>
+            <a href="/starter">Home</a>
+            <a href="/start_detection">Start Detection</a>
+            <a href="/stop_detection">Stop Detection</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <!-- Camera Feed Section -->
+    <h1>Camera View</h1>
+    <div class="camera-container">
+        <img src="/video_feed" alt="Camera Feed">
+        <div class="stop-btn">
+            <form action="/stop_detection" method="get">
+                <button type="submit">Stop Detection</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2024 Real-Time Detection. All Rights Reserved.
+    </div>
+
+</body>
+</html>

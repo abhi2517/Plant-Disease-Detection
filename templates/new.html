@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection and Diagnosis</title>
+
+<style>
+body {
+  background-image: url("/static/images/bg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image within the container */
+  height: 100vh; /* Ensures the container height matches the viewport */
+  margin: 0; /* Removes default margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 120px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: yellow;
+}
+
+p {
+    font-size: 1.7rem;
+    color: black;
+}
+
+.button {
+    margin-right: 20px;
+    width: 200px;
+    display: inline-block;
+    padding: 13px 30px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #28a745;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #218838;
+}
+
+.info-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: left;
+    color: black;
+    max-width: 800px;
+}
+
+.info-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: black;
+}
+
+.info-box p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#" class="logo">Plant Disease Detection</a>
+    <a href="/upload_image">Upload Image</a>
+    <a href="/start_detection">Real-Time Detection</a>
+    <a href="#classes">Disease Classes</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<div class="background">
+    <div class="content">
+        <h1>Plant Disease Detection and Diagnosis</h1>
+        <h2>Welcome, {{ name }}</h2>
+        <p>Use this system to detect Different Classes of Plant Disease.</p>
+        <a href="/upload_image" class="button">Upload Image</a>
+        <a href="/start_detection" class="button">Real-Time Detection</a>
+    </div>
+
+    <div id="classes" class="info-box">
+        <h3>Plant Disease Classes:</h3>
+        <p><strong>BR:</strong> Black Rot (causes dark, sunken spots on stems, leaves, and fruits).</p>
+        <p><strong>RUST:</strong> Rust (produces orange or reddish spots on leaves).</p>
+        <p><strong>PM:</strong> Powdery Mildew (characterized by white, powdery fungal growth).</p>
+        <p><strong>SCAB:</strong> Scab (forms crusty or scaly lesions on fruits and leaves).</p>
+        <p><strong>SPOT:</strong> Spot (creates small, discolored spots on leaves and stems).</p>
+        <p><strong>BLIGHT:</strong> Blight (causes rapid browning and death of plant tissues).</p>
+    </div>
+</div>
+
+</body>
+</html>
